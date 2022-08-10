@@ -224,7 +224,7 @@ for(std::list<int>::iterator it = l.begin(); it != l.end(); it++) {
 
 // Remove head, index, tail
 l.pop_front();                  // head
-l.erase(l.begin() + index);     // index
+l.erase(next(l.begin(),index));     // index
 l.pop_back();                   // tail
 
 // Clear
