@@ -206,7 +206,7 @@ std::list<int> l;
 
 // Insert head, index, tail
 l.push_front(value);                    // head
-l.insert(l.begin() + index, value);     // index
+l.insert(next(l.begin(), index), value);     // index
 l.push_back(value);                     // tail
 
 // Access head, index, tail
