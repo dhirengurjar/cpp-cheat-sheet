@@ -238,7 +238,7 @@ l.clear();
 //	splice(iterator pos, list &x)
 //  	splice(iterator pos, list &x, iterator i)
 //  	splice(iterator pos, list &x, iterator first, iterator last)
-l.splice(l.begin() + index, list2);
+l.splice(next(l.begin(),index), list2);
 
 // Remove: Remove an element by value
 l.remove(value);
