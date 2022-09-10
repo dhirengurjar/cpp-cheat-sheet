@@ -483,6 +483,48 @@ unsigned int size = p.size();
 
 // Remove
 p.pop();
+
+
+//declaring a priority_queue in c++ with a custom comparator
+
+//You should declare a class Compare and overload operator() for it like this:
+
+class Foo
+{
+
+};
+
+class Compare
+{
+public:
+    bool operator() (Foo, Foo)
+    {
+        return true;
+    }
+};
+
+int main()
+{
+    std::priority_queue<Foo, std::vector<Foo>, Compare> pq;
+    return 0;
+}
+//Or, if you for some reasons can't make it as class, you could use std::function for it:
+
+class Foo
+{
+
+};
+
+bool Compare(Foo, Foo)
+{
+    return true;
+}
+
+int main()
+{
+    std::priority_queue<Foo, std::vector<Foo>, std::function<bool(Foo, Foo)>> pq(Compare);
+    return 0;
+}
 ```
 -------------------------------------------------------
 ### 1.10 Heap `std::priority_queue`
