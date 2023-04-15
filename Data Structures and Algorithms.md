@@ -780,3 +780,6 @@ int main()
 #### Visualization
 
 ![QuickSort](Sorting/Animations/Quicksort.gif)
+
+
+happy algo
